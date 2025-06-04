@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio de Ciberseguridad - Xehros</title>
-    <link rel="stylesheet" href="../styles/general_style.css">
+    <link rel="stylesheet" href="../styles/general_styles.css">
 </head>
 <body>
+    <!-- Botón para abrir el menú -->
+    <button class="menu-toggle" onclick="openMenu()">☰</button>
+
+    <!-- Menú lateral -->
+    <nav id="sidebar">
+        <button class="close-btn" onclick="closeMenu()">×</button>
+        <a href="index.html">About Me</a>
+        <a href="proyectos.html">Proyectos</a>
+    </nav>
+
     <h1>Bienvenido a mi Portafolio - Xehros</h1>
     <img src="../pictures/001_avatar.png" alt="Avatar de Xehros">
     <div class="description">
@@ -23,5 +33,7 @@
         </ul>
         <p>¡Gracias por visitar mi portafolio! Estoy emocionado de compartir mi progreso contigo.</p>
     </div>
+
+    <script src="../scripts/menu.js"></script>
 </body>
 </html>
