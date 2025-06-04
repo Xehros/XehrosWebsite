@@ -1,0 +1,132 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;             /* Fondo blanco para toda la página */
+  color: #333;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  padding: 20px 40px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #007BFF;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #007BFF;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+main {
+  text-align: center;
+}
+
+section {
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+  text-align: center;
+}
+
+
+
+
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #007BFF;
+}
+
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+p {
+  font-size: 1.3em;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 700px;
+}
+
+ul li {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+ul li strong {
+  color: #007BFF;
+}
+
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 1em;
+  background: #fff;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+/* Re*
