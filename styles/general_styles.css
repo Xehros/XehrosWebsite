@@ -3,22 +3,23 @@ body {
     font-family: Arial, sans-serif;
     color: #ffffff;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     min-height: 100vh;
+    box-sizing: border-box;
 }
 
 h1 {
     margin-top: 20px;
     font-size: 2em;
     color: #00ffff;
+    text-align: center;
 }
 
 img {
-    width: 300px;
+    max-width: 90%;
     height: auto;
     border-radius: 20px;
     margin: 20px 0;
@@ -27,6 +28,7 @@ img {
 
 .description {
     max-width: 600px;
+    width: 90%;
     text-align: center;
     font-size: 1.1em;
     line-height: 1.6;
@@ -38,7 +40,9 @@ img {
 
 .description ul {
     text-align: left;
-    margin-left: 40px;
+    margin: 10px 0 10px 20px;
+    padding: 0;
+    list-style-position: inside;
 }
 
 a {
@@ -49,9 +53,6 @@ a {
 a:hover {
     text-decoration: underline;
 }
-
-
-
 
 /* Menú lateral */
 #sidebar {
@@ -104,7 +105,42 @@ a:hover {
     cursor: pointer;
 }
 
-/* Ajuste para el body cuando el menú está abierto (opcional) */
+/* Ajuste para el body cuando el menú está abierto */
 body.menu-open {
     overflow: hidden;
 }
+
+/* MEDIA QUERIES para teléfonos */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+        margin-top: 15px;
+    }
+
+    .description {
+        font-size: 1em;
+        padding: 15px;
+    }
+
+    .description ul {
+        margin-left: 15px;
+    }
+
+    #sidebar a {
+        font-size: 1.1em;
+        padding: 8px 15px;
+    }
+
+    .menu-toggle {
+        font-size: 1.8em;
+        top: 15px;
+        left: 15px;
+    }
+
+    .close-btn {
+        font-size: 1.8em;
+        top: 8px;
+        right: 15px;
+    }
+}
+
