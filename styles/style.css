@@ -6,77 +6,45 @@
 }
 
 body {
-  background: #fff;             /* Fondo blanco para toda la página */
+  background: #fff;
   color: #333;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
+  padding-top: 70px; /* espacio para la navbar fija */
 }
 
-
-header {
-  position: sticky;
-  top: 0;
-  background-color: #fff;
-  padding: 20px 40px;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
+/* Logo personalizado */
 .logo {
   font-size: 2.2em;
   font-weight: bold;
   color: #007BFF;
 }
 
-nav ul {
-  display: flex;
-  list-style: none;
+/* Espacio de la barra de navegación */
+.navbar-nav .nav-link {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-nav ul li {
-  margin-left: 30px;
+.navbar-brand {
+  margin-left: 10px;
 }
 
-nav a {
-  text-decoration: none;
-  color: #333;
-  font-size: 1.2em;
-  transition: color 0.3s;
+.navbar-nav {
+  margin-right: 50px;
 }
 
-nav a:hover {
-  color: #007BFF;
-}
-
-.menu-toggle {
-  display: none;
-}
-
-main {
-  text-align: center;
-}
-
+/* Secciones */
 section {
-  background: none;
-  box-shadow: none;
-  border-radius: 0;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  margin: 0;
   text-align: center;
 }
-
-
-
-
 
 h1 {
   font-size: 3em;
@@ -100,6 +68,7 @@ ul {
   list-style: none;
   padding: 0;
   max-width: 700px;
+  margin: 0 auto;
 }
 
 ul li {
@@ -117,16 +86,15 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a.logo:hover{
+  color: #007BFF;
+}
+
+a.nav-link:hover {
   text-decoration: underline;
 }
 
 footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 1em;
   background: #fff;
   box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
 }
-
-/* Re*
