@@ -40,9 +40,9 @@ section {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* Mueve el texto hacia arriba */
   align-items: center;
-  padding: 20px;
+  padding: 100px 20px 20px; /* Añade un espacio superior para separar de la navbar */
   text-align: center;
 }
 
