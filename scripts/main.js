@@ -2,13 +2,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 const sections = document.querySelectorAll("section");
 
-// Usamos matchMedia para habilitar las animaciones en todos los tamaños de pantalla
 ScrollTrigger.matchMedia({
-  // Para todas las pantallas
   "(min-width: 0px)": function() {
     sections.forEach((section) => {
-      const id = section.id;
-
       gsap.fromTo(section,
         { opacity: 0, scale: 0.5 },
         {
@@ -34,17 +30,31 @@ document.querySelectorAll('nav a').forEach(link => {
     e.preventDefault();
     const targetId = link.getAttribute('href').substring(1);
     const targetSection = document.getElementById(targetId);
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      gsap.set(targetSection, { clearProps: "all" });
-    }
 
     const navbarToggler = document.querySelector('.navbar-toggler');
     const navbarCollapse = document.querySelector('.navbar-collapse');
+
+    // Cerrar la navbar ANTES de calcular la altura para evitar que afecte al scroll
     if (navbarToggler && navbarCollapse.classList.contains('show')) {
       navbarToggler.click();
     }
+
+    if (targetSection) {
+      // Usar un pequeño retraso para esperar a que la navbar colapsada aplique la transición (si la hay)
+      setTimeout(() => {
+        const navbar = document.querySelector('.navbar');
+        const navbarHeight = navbar ? navbar.offsetHeight : 0;
+
+        const sectionTop = targetSection.offsetTop;
+
+        window.scrollTo({
+          top: sectionTop - navbarHeight,
+          behavior: 'smooth'
+        });
+
+        gsap.set(targetSection, { clearProps: "all" });
+      }, 300); // ajusta el delay si Bootstrap usa transición más larga
+    }
   });
 });
-
 

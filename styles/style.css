@@ -11,7 +11,7 @@ body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
-  padding-top: 70px; /* espacio para la navbar fija */
+  padding-top: 10px; /* espacio para la navbar fija */
 }
 
 /* Logo personalizado */
@@ -40,9 +40,8 @@ section {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* Mueve el texto hacia arriba */
   align-items: center;
-  padding: 20px;
   text-align: center;
 }
 
