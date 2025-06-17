@@ -3,83 +3,176 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xehros - Portafolio de Ciberseguridad</title>
-  
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- Tu CSS -->
-  <link rel="stylesheet" href="styles/style.css">
+  <title>XehrosCyberSec</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand logo">Xehros</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#sobremi">Sobre mí</a></li>
-            <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-          </ul>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">XEHROSCYBERSEC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre Mi</a></li>
+          <li class="nav-item"><a class="nav-link"  href="#ancla-proyectos">Proyectos</a></li>
+          <li class="nav-item"><a class="btn btn-outline-success ms-2" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- INICIO -->
+  <section id="inicio">
+    <div id="bg-video-wrapper">
+      <video autoplay muted loop playsinline id="bg-video">
+        <source src="videos/bg1.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="contenido">
+      <h1>XehrosCyberSec</h1>
+      <p class="subtitulo">Explorando el lado defensivo de la ciberseguridad.</p>
+      <p class="descripcion">Proyectos y laboratorios prácticos enfocados en Blue Team, análisis forense, monitoreo de amenazas y respuesta ante incidentes.</p>
+    </div>
+  </section>
+
+
+
+
+    <!-- SOBRE MI -->
+    <section id="sobre" class="py-5">
+      <div class="container d-flex flex-column flex-md-row align-items-center justify-content-center">
+        <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
+          <h6 class="text-success fw-bold">SOBRE MÍ</h6>
+          <h2 class="fw-bold mb-3">Especialista en Ciberseguridad</h2>
+          <p class="text-muted">
+            Soy Alejandro, apasionado de la informática y centrado en la ciberseguridad. Me especializo en Blue Team, análisis forense y soluciones SIEM-SOAR. Este portafolio es un reflejo de mis conocimientos prácticos y proyectos reales.
+          </p>
+          <a href="#contacto" class="btn btn-outline-success mt-3">Contacta conmigo</a>
+        </div>
+        <div class="col-md-5" data-aos="fade-left">
+          <img src="images/about.png" class="img-fluid rounded shadow" alt="Sobre mí">
         </div>
       </div>
-    </nav>
-  </header>
-
-  <main class="mt-5 pt-5">
-    <section id="inicio" class="hero">
-      <div class="container text-center">
-        <h1>¡Hola! Soy Xehros</h1>
-        <p>Especialista en ciberseguridad y desarrollo web. Ayudo a empresas y profesionales a proteger sus activos digitales y a optimizar su presencia online con soluciones innovadoras y seguras.</p>
-      </div>
     </section>
 
-    <section id="sobremi" class="about">
-      <div class="container text-center">
-        <h1>Sobre mí</h1>
-        <p>Soy Xehros, un profesional de la ciberseguridad con experiencia en análisis forense digital, auditoría de sistemas y desarrollo web seguro. Mi pasión es construir soluciones tecnológicas que no solo funcionen bien, sino que sean resistentes a las amenazas del mundo real. Me encanta aprender y compartir mi conocimiento para que todos podamos disfrutar de un entorno digital más seguro.</p>
-      </div>
-    </section>
+    <!-- PROYECTOS-->
+<section id="proyectos" class="bg-light py-5">
+  <div class="container-sm"> <!-- más estrecho que container -->
+    <div id="ancla-proyectos"></div>
+    <h6 class="text-success fw-bold">PROYECTOS DE CIBERSEGURIDAD</h6>
+    <h2 class="fw-bold mb-4">Algunos ejemplos de proyectos realizados</h2>
 
-    <section id="proyectos" class="projects">
-      <div class="container">
-        <h1 class="text-center">Proyectos</h1>
-        <ul>
-          <li><strong>Monitorización de Red Segura:</strong> Desarrollo de un sistema de monitorización de red para detectar intrusiones en tiempo real usando Wazuh y ELK.</li>
-          <li><strong>Análisis Forense de WhatsApp:</strong> Guía y metodología para extraer y analizar conversaciones de WhatsApp de forma segura y legal.</li>
-          <li><strong>Desarrollo de Aplicaciones Seguras:</strong> Creación de aplicaciones web con protección contra vulnerabilidades comunes (OWASP Top 10).</li>
-        </ul>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+      <!-- Proyecto 1 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/card1.png" class="card-img-top" alt="Wazuh ELK Suricata">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">LAB WAZUH + ELK + SURICATA</h5>
+            <p class="card-text">Despliegue de un SIEM completo con casos de uso reales.</p>
+            <div class="badges mt-2">
+              <span class="badge bg-success">SIEM</span>
+              <span class="badge bg-success">ELK</span>
+              <span class="badge bg-success">Wazuh</span>
+              <span class="badge bg-success">Suricata</span>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
 
-    <section id="contacto" class="contact">
-      <div class="container text-center">
-        <h1>Contacto</h1>
-        <p>¿Quieres trabajar conmigo o tienes alguna pregunta? ¡Hablemos!</p>
-        <ul class="list-unstyled">
-          <li>Email: tuemail@ejemplo.com</li>
-          <li>LinkedIn: <a href="#">Tu perfil</a></li>
-          <li>GitHub: <a href="#">Tu perfil</a></li>
-        </ul>
+      <!-- Proyecto 2 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/card2.png" class="card-img-top" alt="TheHive Cortex">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">LAB THEHIVE + CORTEX</h5>
+            <p class="card-text">Automatización de análisis e integración con SIEM.</p>
+            <div class="badges mt-2">
+              <span class="badge bg-success">SOAR</span>
+              <span class="badge bg-success">TheHive</span>
+              <span class="badge bg-success">Cortex</span>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
-  </main>
 
-  <footer class="text-center py-3">
-    <p>&copy; 2025 Xehros. Todos los derechos reservados.</p>
+      <!-- Proyecto 3 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/card3.png" class="card-img-top" alt="T-Pot honeypot">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">LAB T-POT</h5>
+            <p class="card-text">Simulación de honeypots con detección y análisis de amenazas.</p>
+            <div class="badges mt-2">
+              <span class="badge bg-success">Honeypot</span>
+              <span class="badge bg-success">T-Pot</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proyecto 4 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/card3.png" class="card-img-top" alt="T-Pot honeypot">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">LAB T-POT</h5>
+            <p class="card-text">Simulación de honeypots con detección y análisis de amenazas.</p>
+            <div class="badges mt-2">
+              <span class="badge bg-success">Honeypot</span>
+              <span class="badge bg-success">T-Pot</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- CONTACTO -->
+  <footer id="contacto" class="footer-custom text-white">
+    <div class="container text-center">
+      <h5 class="fw-bold text-white mb-4">Contacto</h5>
+
+      <div class="d-flex justify-content-center flex-wrap gap-4 fs-5 mb-4">
+        <a href="mailto:xehroscyber@gmail.com" class="footer-link">
+          <i class="fas fa-envelope me-2"></i> xehroscyber@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/alejandro-gonz%C3%A1lez-de-la-rosa-50a58520a/" target="_blank" class="footer-link">
+          <i class="fab fa-linkedin me-2"></i> LinkedIn
+        </a>
+        <a href="https://github.com/Xehros" target="_blank" class="footer-link">
+          <i class="fab fa-github me-2"></i> github.com/Xehros
+        </a>
+      </div>
+
+      <hr class="border-gray mb-3" style="opacity: 0.1;">
+
+      <small class="text-secondary">&copy; 2025 XehrosCyberSec · Todos los derechos reservados</small>
+    </div>
   </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- GSAP y ScrollTrigger -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="scripts/main.js"></script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="scripts/scripts.js"></script>
+
+
 </body>
 </html>
