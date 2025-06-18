@@ -37,17 +37,16 @@ nav.navbar {
 }
 
 .scroll-anchor {
-  scroll-margin-top: 100px; /* ajusta según la altura de tu navbar */
+  scroll-margin-top: 100px;
 }
 
 #ancla-proyectos {
   position: relative;
-  top: -100px; /* ajusta según altura real del navbar */
+  top: -100px;
   height: 1px;
 }
 
 /* SECCIÓN INICIO */
-/* Altura total menos el header (por ejemplo, 80px) */
 #inicio {
   position: relative;
   height: 100vh;
@@ -58,9 +57,8 @@ nav.navbar {
   text-align: center;
   color: white;
   z-index: 1;
-  scroll-margin-top: 80px; /* ahora usamos esto para compensar la navbar */
+  scroll-margin-top: 80px;
 }
-
 
 #inicio .contenido {
   z-index: 1;
@@ -72,7 +70,6 @@ nav.navbar {
   padding: 1rem;
 }
 
-/* VIDEO FIJO SOLO COMO FONDO */
 #bg-video-wrapper {
   position: sticky;
   top: 0;
@@ -93,7 +90,6 @@ nav.navbar {
   pointer-events: none;
 }
 
-/* TEXTO VISIBLE EN VIDEO */
 #inicio h1 {
   font-size: 3.5rem;
   font-weight: bold;
@@ -113,13 +109,12 @@ nav.navbar {
   text-shadow: 1px 1px 4px #000;
 }
 
-/* SECCIÓN SOBRE MI */
+/* SOBRE MI */
 #sobre {
-  height: 105vh; /* 🔥 fuerza a ocupar 150% del alto de la pantalla */
-  display: block; /* ❌ desactiva flex si no quieres centrar */
+  min-height: 100vh;
   background-color: white;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
   position: relative;
   z-index: 10;
 }
@@ -138,14 +133,13 @@ nav.navbar {
 }
 
 #sobre img {
-  max-width: 70%;
+  max-width: 80%;
   height: auto;
   margin: 0 auto;
-  box-shadow: none; /* ✅ Esto elimina la sombra */
+  box-shadow: none;
 }
 
-
-/* SECCIÓN PROYECTOS */
+/* PROYECTOS */
 #proyectos {
   background-color: white;
 }
@@ -174,7 +168,7 @@ nav.navbar {
 }
 
 #proyectos .card:hover {
-  border-color: #28a745; /* verde neón */
+  border-color: #28a745;
   box-shadow:
     0 0 20px rgba(0, 255, 128, 0.6),
     0 0 40px rgba(0, 255, 128, 0.5),
@@ -199,8 +193,7 @@ nav.navbar {
   margin-top: auto;
 }
 
-
-/* SECCIÓN CONTACTO */
+/* CONTACTO */
 .footer-custom {
   background-color: #121212;
   padding: 4rem 1rem;
@@ -228,119 +221,109 @@ nav.navbar {
   color: #28a745;
 }
 
-
-
-/* ⚠️ LO CRÍTICO: otras secciones con fondo blanco */
+/* Secciones fondo blanco */
 section:not(#inicio) {
   background-color: white;
   color: black;
   position: relative;
-  z-index: 10; /* 👈 Fuerza a aparecer encima del video */
-  min-height: 100px; /* fuerza un mínimo para evitar secciones vacías */
+  z-index: 10;
+  min-height: 100px;
 }
 
+/* RESPONSIVE UNIVERSAL */
+@media (max-width: 1200px) {
+  #inicio h1 {
+    font-size: 3rem;
+  }
 
-
-/* === AJUSTES RESPONSIVE === */
-@media (max-width: 768px) {
-
-@media (max-width: 768px) {
-  .navbar-collapse {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
+    .navbar-collapse {
     background-color: white;
     padding: 1rem;
-    z-index: 1000;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    overflow-x: hidden; /* evita scroll horizontal */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 0 0 10px 10px;
   }
 
-  body {
-    overflow-x: hidden; /* asegura que nada se desborde horizontalmente */
-  }
-
-  html {
-    overflow-x: hidden;
-  }
-
-  .navbar-nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
+  .navbar-nav .nav-link,
+  .navbar-nav .btn {
+    color: #000 !important;
   }
 }
 
+@media (max-width: 992px) {
 
-  /* INICIO */
+    .navbar-collapse {
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 0 0 10px 10px;
+  }
+
+  .navbar-nav .nav-link,
+  .navbar-nav .btn {
+    color: #000 !important;
+  }
+  #inicio h1 {
+    font-size: 2.5rem;
+  }
+
+  #inicio .subtitulo {
+    font-size: 1.3rem;
+  }
+
+  #inicio .descripcion {
+    font-size: 1.1rem;
+  }
+
+  #sobre h2 {
+    font-size: 2rem;
+  }
+
+  #sobre p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+    .navbar-collapse {
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 0 0 10px 10px;
+  }
+
+  .navbar-nav .nav-link,
+  .navbar-nav .btn {
+    color: #000 !important;
+  }
   #inicio h1 {
     font-size: 2.2rem;
   }
 
   #inicio .subtitulo {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   #inicio .descripcion {
     font-size: 1rem;
   }
 
-  /* SOBRE MÍ */
-  #sobre {
-    height: auto;
-    padding: 4rem 1rem;
-  }
-
   #sobre .container {
-    flex-direction: column;
-  }
-
-  #sobre h2 {
-    font-size: 1.8rem;
-  }
-
-  #sobre p {
-    font-size: 1rem;
-    line-height: 1.6;
+    flex-direction: column !important;
+    text-align: center;
   }
 
   #sobre img {
-    max-width: 100%;
+    max-width: 90%;
     margin-top: 2rem;
   }
 
-  /* PROYECTOS */
-  #proyectos h2 {
-    font-size: 1.6rem;
-  }
-
-  #proyectos .card-title {
-    font-size: 1rem;
-  }
-
-  #proyectos .card-text {
-    font-size: 0.95rem;
-  }
-
-  #proyectos .card-img-top {
-    height: 180px;
-  }
-
-  /* CONTACTO */
-  .footer-custom .footer-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-
   .footer-custom h5 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
-  .footer-custom {
-    padding: 3rem 1rem;
+  .footer-custom .footer-link {
+    font-size: 0.95rem;
   }
 
   .footer-custom .d-flex {
@@ -349,3 +332,50 @@ section:not(#inicio) {
   }
 }
 
+@media (max-width: 576px) {
+
+    .navbar-collapse {
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 0 0 10px 10px;
+  }
+
+  .navbar-nav .nav-link,
+  .navbar-nav .btn {
+    color: #000 !important;
+  }
+  #inicio h1 {
+    font-size: 1.8rem;
+  }
+
+  #inicio .subtitulo {
+    font-size: 1rem;
+  }
+
+  #inicio .descripcion {
+    font-size: 0.95rem;
+  }
+
+  #sobre h2 {
+    font-size: 1.6rem;
+  }
+
+  #sobre p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ✅ Elimina el scrollbar horizontal en móviles */
+body, html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* ✅ Ajusta el botón del menú en móviles */
+.navbar-toggler {
+  margin-right: 0;       /* evita que se desplace fuera del viewport */
+  padding: 0.25rem 0.75rem;
+  border: none;
+  box-shadow: none;
+}
